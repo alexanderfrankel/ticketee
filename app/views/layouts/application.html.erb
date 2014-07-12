@@ -8,6 +8,12 @@
 </head>
 <body>
 
+<%= flash.each do |notice, message| %>
+	<div class='flash' id=<%= notice %>'>
+		<%= message %>
+	</div>
+<% end %>
+
 <%= yield %>
 
 </body>
