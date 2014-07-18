@@ -7,7 +7,7 @@ feature "Viewing Tickets" do
 		create(:ticket,
 						project: textmate_2,
 						title: "Make it shiny!",
-						description: "Gridients! Starbursts! Oh my!")
+						description: "Gradients! Starbursts! Oh my!")
 
 		internet_explorer = create(:project, name: "Internet Explorer")
 
@@ -26,7 +26,7 @@ feature "Viewing Tickets" do
 		expect(page).to_not have_content("Standards compliance")
 
 		click_link "Make it shiny!"
-		within("ticket h2") do
+		within("#ticket h2") do
 			expect(page).to have_content("Make it shiny!")
 		end
 
