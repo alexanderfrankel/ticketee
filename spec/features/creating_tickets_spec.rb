@@ -12,7 +12,7 @@ feature "Creating Tickets" do
 	scenario "Creating a ticket" do
 		fill_in "Title", with: "Non-standards compiance"
 		fill_in "Description", with: "My pages are ugly!"
-		click_button "Create Tickets"
+		click_button "Create Ticket"
 
 		expect(page).to have_content("Ticket has been created.")
 	end
