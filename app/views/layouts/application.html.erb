@@ -14,13 +14,17 @@
 </head>
 <body>
 
-<%= flash.each do |notice, message| %>
-	<div class='flash' id=<%= notice %>'>
-		<%= message %>
-	</div>
-<% end %>
+	<nav>
+		<%= link_to "Sign up", new_user_path %>
+	</nav>
 
-<%= yield %>
+	<%= flash.each do |notice, message| %>
+		<div class='flash' id='<%= notice %>'>
+			<%= message %>
+		</div>
+	<% end %>
+
+	<%= yield %>
 
 </body>
 </html>
