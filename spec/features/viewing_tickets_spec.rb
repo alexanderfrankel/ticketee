@@ -4,10 +4,12 @@ feature "Viewing Tickets" do
 	before do
 		textmate_2 = create(:project, name: "TextMate 2")
 
-		create(:ticket,
+		user = create(:user)
+		ticket = create(:ticket,
 						project: textmate_2,
 						title: "Make it shiny!",
 						description: "Gradients! Starbursts! Oh my!")
+		ticket.update(user: user)
 
 		internet_explorer = create(:project, name: "Internet Explorer")
 
